@@ -18,17 +18,19 @@ namespace Jellyfin.Plugin.FileTransformation
         
         public IServiceProvider ServiceProvider { get; }
         
-        public FileTransformationPlugin(IApplicationPaths applicationPaths, IXmlSerializer xmlSerializer, IServiceProvider serviceProvider, IWebFileTransformationWriteService writeService) : base(applicationPaths, xmlSerializer)
-        {
-            Instance = this;
-            
-            ServiceProvider = serviceProvider;
+        public FileTransformationPlugin(IApplicationPaths applicationPaths, IXmlSerializer xmlSerializer, IServiceProvider serviceProvider) : base(applicationPaths, xmlSerializer)
+{
+    Instance = this;
+    
+    ServiceProvider = serviceProvider;
 
-            foreach (PluginDefinedTransformation transformation in Configuration.Transformations)
-            {
-                writeService.AddTransformation(transformation.Id, transformation.FilenamePattern, (path, contents) => HandlePluginConfigTransformation(path, contents, transformation));
-            }
-        }
+    IWebFileTransformationWriteService writeService = serviceProvider.GetRequiredService<IWebFileTransformationWriteService>();
+
+    foreach (PluginDefinedTransformation transformation in Configuration.Transformations)
+    {
+        writeService.AddTransformation(transformation.Id, transformation.FilenamePattern, (path, contents) => HandlePluginConfigTransformation(path, contents, transformation));
+    }
+}
 
         public override void UpdateConfiguration(BasePluginConfiguration configuration)
         {
