@@ -1,0 +1,16 @@
+name: Build for Jellyfin 12.4
+on: workflow_dispatch
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 10.0.x
+      - run: dotnet publish src/Jellyfin.Plugin.FileTransformation/Jellyfin.Plugin.FileTransformation.csproj -c Release -p:JellyfinVersion=12.4.0 -o out
+      - run: cd out && zip ../FileTransformation-12.4.0.zip *.dll *.deps.json *.pdb logo.png
+      - uses: actions/upload-artifact@v4
+        with:
+          name: FileTransformation-12.4.0
+          path: FileTransformation-12.4.0.zip
