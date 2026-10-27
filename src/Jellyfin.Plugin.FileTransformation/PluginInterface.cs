@@ -12,7 +12,16 @@ namespace Jellyfin.Plugin.FileTransformation
     {
         public static void RegisterTransformation(object payload)
 {
-    IWebFileTransformationWriteService writeService = FileTransformationPlugin.Instance.ServiceProvider
+    // If this plugin hasn't finished constructing yet (startup ordering, or a prior
+    // construction failure), Instance is null. Fail safe instead of throwing a
+    // NullReferenceException that kills the calling plugin's whole startup task.
+    FileTransformationPlugin? plugin = FileTransformationPlugin.Instance;
+    if (plugin == null)
+    {
+        return;
+    }
+
+    IWebFileTransformationWriteService writeService = plugin.ServiceProvider
         .GetRequiredService<IWebFileTransformationWriteService>();
 
     JObject? payloadAsJObject = payload as JObject ?? JObject.Parse(payload.ToString() ?? "{}");
@@ -25,8 +34,8 @@ namespace Jellyfin.Plugin.FileTransformation
                 // by the plugin is scoped and will be disposed after startup. Resolving lazily
                 // inside the callback causes ObjectDisposedException on every subsequent request.
                 // Both ILogger and IServerApplicationHost are singletons, so capturing them here is safe.
-                ILogger logger = FileTransformationPlugin.Instance.ServiceProvider.GetRequiredService<IFileTransformationLogger>();
-                IServerApplicationHost serverApplicationHost = FileTransformationPlugin.Instance.ServiceProvider.GetRequiredService<IServerApplicationHost>();
+                ILogger logger = plugin.ServiceProvider.GetRequiredService<IFileTransformationLogger>();
+                IServerApplicationHost serverApplicationHost = plugin.ServiceProvider.GetRequiredService<IServerApplicationHost>();
 
                 writeService.AddTransformation(castedPayload.Id, castedPayload.FileNamePattern, async (path, contents) =>
                 {
@@ -37,7 +46,13 @@ namespace Jellyfin.Plugin.FileTransformation
 
         public static void RemoveTransformation(Guid id)
         {
-            IWebFileTransformationWriteService writeService = FileTransformationPlugin.Instance.ServiceProvider
+            FileTransformationPlugin? plugin = FileTransformationPlugin.Instance;
+            if (plugin == null)
+            {
+                return;
+            }
+
+            IWebFileTransformationWriteService writeService = plugin.ServiceProvider
                 .GetRequiredService<IWebFileTransformationWriteService>();
 
             writeService.RemoveTransformation(id);
