@@ -10,12 +10,14 @@ namespace Jellyfin.Plugin.FileTransformation
 {
     public static class PluginInterface
     {
-        public static void RegisterTransformation(JObject payload)
-        {
-            IWebFileTransformationWriteService writeService = FileTransformationPlugin.Instance.ServiceProvider
-                .GetRequiredService<IWebFileTransformationWriteService>();
+        public static void RegisterTransformation(object payload)
+{
+    IWebFileTransformationWriteService writeService = FileTransformationPlugin.Instance.ServiceProvider
+        .GetRequiredService<IWebFileTransformationWriteService>();
 
-            TransformationRegistrationPayload? castedPayload = payload.ToObject<TransformationRegistrationPayload>();
+    JObject? payloadAsJObject = payload as JObject ?? JObject.Parse(payload.ToString() ?? "{}");
+
+    TransformationRegistrationPayload? castedPayload = payloadAsJObject.ToObject<TransformationRegistrationPayload>();
 
             if (castedPayload != null)
             {
