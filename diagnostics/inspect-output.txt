@@ -1,22 +1,60 @@
-/home/runner/work/jellyfin-plugin-file-transformation/jellyfin-plugin-file-transformation/inspect/Program.cs(4,1): error CS0103: The name 'Console' does not exist in the current context [/home/runner/work/jellyfin-plugin-file-transformation/jellyfin-plugin-file-transformation/inspect/inspect.csproj]
-/home/runner/work/jellyfin-plugin-file-transformation/jellyfin-plugin-file-transformation/inspect/Program.cs(6,15): error CS0103: The name 'Path' does not exist in the current context [/home/runner/work/jellyfin-plugin-file-transformation/jellyfin-plugin-file-transformation/inspect/inspect.csproj]
-/home/runner/work/jellyfin-plugin-file-transformation/jellyfin-plugin-file-transformation/inspect/Program.cs(7,1): error CS0103: The name 'Console' does not exist in the current context [/home/runner/work/jellyfin-plugin-file-transformation/jellyfin-plugin-file-transformation/inspect/inspect.csproj]
-/home/runner/work/jellyfin-plugin-file-transformation/jellyfin-plugin-file-transformation/inspect/Program.cs(13,5): error CS0103: The name 'Console' does not exist in the current context [/home/runner/work/jellyfin-plugin-file-transformation/jellyfin-plugin-file-transformation/inspect/inspect.csproj]
-/home/runner/work/jellyfin-plugin-file-transformation/jellyfin-plugin-file-transformation/inspect/Program.cs(15,8): error CS0246: The type or namespace name 'Exception' could not be found (are you missing a using directive or an assembly reference?) [/home/runner/work/jellyfin-plugin-file-transformation/jellyfin-plugin-file-transformation/inspect/inspect.csproj]
-/home/runner/work/jellyfin-plugin-file-transformation/jellyfin-plugin-file-transformation/inspect/Program.cs(17,5): error CS0103: The name 'Console' does not exist in the current context [/home/runner/work/jellyfin-plugin-file-transformation/jellyfin-plugin-file-transformation/inspect/inspect.csproj]
-/home/runner/work/jellyfin-plugin-file-transformation/jellyfin-plugin-file-transformation/inspect/Program.cs(21,1): error CS0246: The type or namespace name 'Type' could not be found (are you missing a using directive or an assembly reference?) [/home/runner/work/jellyfin-plugin-file-transformation/jellyfin-plugin-file-transformation/inspect/inspect.csproj]
-/home/runner/work/jellyfin-plugin-file-transformation/jellyfin-plugin-file-transformation/inspect/Program.cs(25,5): error CS0103: The name 'Console' does not exist in the current context [/home/runner/work/jellyfin-plugin-file-transformation/jellyfin-plugin-file-transformation/inspect/inspect.csproj]
-/home/runner/work/jellyfin-plugin-file-transformation/jellyfin-plugin-file-transformation/inspect/Program.cs(29,5): error CS0103: The name 'Console' does not exist in the current context [/home/runner/work/jellyfin-plugin-file-transformation/jellyfin-plugin-file-transformation/inspect/inspect.csproj]
-/home/runner/work/jellyfin-plugin-file-transformation/jellyfin-plugin-file-transformation/inspect/Program.cs(32,9): error CS0103: The name 'Console' does not exist in the current context [/home/runner/work/jellyfin-plugin-file-transformation/jellyfin-plugin-file-transformation/inspect/inspect.csproj]
-/home/runner/work/jellyfin-plugin-file-transformation/jellyfin-plugin-file-transformation/inspect/Program.cs(34,32): error CS1061: 'Type?[]' does not contain a definition for 'Where' and no accessible extension method 'Where' accepting a first argument of type 'Type?[]' could be found (are you missing a using directive or an assembly reference?) [/home/runner/work/jellyfin-plugin-file-transformation/jellyfin-plugin-file-transformation/inspect/inspect.csproj]
-/home/runner/work/jellyfin-plugin-file-transformation/jellyfin-plugin-file-transformation/inspect/Program.cs(34,59): error CS0246: The type or namespace name 'Type' could not be found (are you missing a using directive or an assembly reference?) [/home/runner/work/jellyfin-plugin-file-transformation/jellyfin-plugin-file-transformation/inspect/inspect.csproj]
-/home/runner/work/jellyfin-plugin-file-transformation/jellyfin-plugin-file-transformation/inspect/Program.cs(36,8): error CS0246: The type or namespace name 'Exception' could not be found (are you missing a using directive or an assembly reference?) [/home/runner/work/jellyfin-plugin-file-transformation/jellyfin-plugin-file-transformation/inspect/inspect.csproj]
-/home/runner/work/jellyfin-plugin-file-transformation/jellyfin-plugin-file-transformation/inspect/Program.cs(38,5): error CS0103: The name 'Console' does not exist in the current context [/home/runner/work/jellyfin-plugin-file-transformation/jellyfin-plugin-file-transformation/inspect/inspect.csproj]
-/home/runner/work/jellyfin-plugin-file-transformation/jellyfin-plugin-file-transformation/inspect/Program.cs(49,5): error CS0103: The name 'Console' does not exist in the current context [/home/runner/work/jellyfin-plugin-file-transformation/jellyfin-plugin-file-transformation/inspect/inspect.csproj]
-/home/runner/work/jellyfin-plugin-file-transformation/jellyfin-plugin-file-transformation/inspect/Program.cs(53,9): error CS0103: The name 'Console' does not exist in the current context [/home/runner/work/jellyfin-plugin-file-transformation/jellyfin-plugin-file-transformation/inspect/inspect.csproj]
-/home/runner/work/jellyfin-plugin-file-transformation/jellyfin-plugin-file-transformation/inspect/Program.cs(56,13): error CS0103: The name 'Console' does not exist in the current context [/home/runner/work/jellyfin-plugin-file-transformation/jellyfin-plugin-file-transformation/inspect/inspect.csproj]
-/home/runner/work/jellyfin-plugin-file-transformation/jellyfin-plugin-file-transformation/inspect/Program.cs(62,13): error CS0103: The name 'Console' does not exist in the current context [/home/runner/work/jellyfin-plugin-file-transformation/jellyfin-plugin-file-transformation/inspect/inspect.csproj]
-/home/runner/work/jellyfin-plugin-file-transformation/jellyfin-plugin-file-transformation/inspect/Program.cs(66,12): error CS0246: The type or namespace name 'Exception' could not be found (are you missing a using directive or an assembly reference?) [/home/runner/work/jellyfin-plugin-file-transformation/jellyfin-plugin-file-transformation/inspect/inspect.csproj]
-/home/runner/work/jellyfin-plugin-file-transformation/jellyfin-plugin-file-transformation/inspect/Program.cs(68,9): error CS0103: The name 'Console' does not exist in the current context [/home/runner/work/jellyfin-plugin-file-transformation/jellyfin-plugin-file-transformation/inspect/inspect.csproj]
-
-The build failed. Fix the build errors and run again.
+Host IPlugin assembly: MediaBrowser.Common, Version=12.4.0.0, Culture=neutral, PublicKeyToken=null
+Loading: /home/runner/work/jellyfin-plugin-file-transformation/jellyfin-plugin-file-transformation/out/Jellyfin.Plugin.FileTransformation.dll
+Loaded assembly OK: Jellyfin.Plugin.FileTransformation, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null
+GetExportedTypes() OK, count=18
+Concrete type: Jellyfin.Plugin.FileTransformation.FileTransformationPlugin
+    IPlugin.IsAssignableFrom = True
+    implements: MediaBrowser.Common.Plugins.IPlugin (from MediaBrowser.Common 12.4.0.0)
+    implements: MediaBrowser.Common.Plugins.IPluginAssembly (from MediaBrowser.Common 12.4.0.0)
+    implements: MediaBrowser.Common.Plugins.IHasPluginConfiguration (from MediaBrowser.Common 12.4.0.0)
+    implements: MediaBrowser.Model.Plugins.IHasWebPages (from MediaBrowser.Model 12.4.0.0)
+    base: MediaBrowser.Common.Plugins.BasePlugin`1[[Jellyfin.Plugin.FileTransformation.Configuration.PluginConfiguration, Jellyfin.Plugin.FileTransformation, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null]] (from MediaBrowser.Common 12.4.0.0)
+    base: MediaBrowser.Common.Plugins.BasePlugin (from MediaBrowser.Common 12.4.0.0)
+    base: System.Object (from System.Private.CoreLib 10.0.0.0)
+Concrete type: Jellyfin.Plugin.FileTransformation.PluginServiceRegistrator
+    IPlugin.IsAssignableFrom = False
+    implements: MediaBrowser.Controller.Plugins.IPluginServiceRegistrator (from MediaBrowser.Controller 12.4.0.0)
+    base: System.Object (from System.Private.CoreLib 10.0.0.0)
+Concrete type: Jellyfin.Plugin.FileTransformation.Models.TransformationRegistrationPayload
+    IPlugin.IsAssignableFrom = False
+    base: System.Object (from System.Private.CoreLib 10.0.0.0)
+Concrete type: Jellyfin.Plugin.FileTransformation.Library.TransformFile
+    IPlugin.IsAssignableFrom = False
+    implements: System.ICloneable (from System.Private.CoreLib 10.0.0.0)
+    implements: System.Runtime.Serialization.ISerializable (from System.Private.CoreLib 10.0.0.0)
+    base: System.MulticastDelegate (from System.Private.CoreLib 10.0.0.0)
+    base: System.Delegate (from System.Private.CoreLib 10.0.0.0)
+    base: System.Object (from System.Private.CoreLib 10.0.0.0)
+Concrete type: Jellyfin.Plugin.FileTransformation.Infrastructure.FileTransformationLogger
+    IPlugin.IsAssignableFrom = False
+    implements: Jellyfin.Plugin.FileTransformation.Library.IFileTransformationLogger (from Jellyfin.Plugin.FileTransformation 3.0.0.0)
+    implements: Microsoft.Extensions.Logging.ILogger`1[[Jellyfin.Plugin.FileTransformation.FileTransformationPlugin, Jellyfin.Plugin.FileTransformation, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null]] (from Microsoft.Extensions.Logging.Abstractions 10.0.0.0)
+    implements: Microsoft.Extensions.Logging.ILogger (from Microsoft.Extensions.Logging.Abstractions 10.0.0.0)
+    base: System.Object (from System.Private.CoreLib 10.0.0.0)
+Concrete type: Jellyfin.Plugin.FileTransformation.Infrastructure.FileTransformationMiddleware
+    IPlugin.IsAssignableFrom = False
+    base: System.Object (from System.Private.CoreLib 10.0.0.0)
+Concrete type: Jellyfin.Plugin.FileTransformation.Infrastructure.FileTransformationStartupFilter
+    IPlugin.IsAssignableFrom = False
+    implements: Microsoft.AspNetCore.Hosting.IStartupFilter (from Microsoft.AspNetCore.Hosting.Abstractions 10.0.0.0)
+    base: System.Object (from System.Private.CoreLib 10.0.0.0)
+Concrete type: Jellyfin.Plugin.FileTransformation.Infrastructure.WebFileTransformationService
+    IPlugin.IsAssignableFrom = False
+    implements: Jellyfin.Plugin.FileTransformation.Library.IWebFileTransformationReadService (from Jellyfin.Plugin.FileTransformation 3.0.0.0)
+    implements: Jellyfin.Plugin.FileTransformation.Library.IWebFileTransformationWriteService (from Jellyfin.Plugin.FileTransformation 3.0.0.0)
+    base: System.Object (from System.Private.CoreLib 10.0.0.0)
+Concrete type: Jellyfin.Plugin.FileTransformation.Controller.FileTransformationController
+    IPlugin.IsAssignableFrom = False
+    base: Microsoft.AspNetCore.Mvc.ControllerBase (from Microsoft.AspNetCore.Mvc.Core 10.0.0.0)
+    base: System.Object (from System.Private.CoreLib 10.0.0.0)
+Concrete type: Jellyfin.Plugin.FileTransformation.Configuration.PluginConfiguration
+    IPlugin.IsAssignableFrom = False
+    base: MediaBrowser.Model.Plugins.BasePluginConfiguration (from MediaBrowser.Model 12.4.0.0)
+    base: System.Object (from System.Private.CoreLib 10.0.0.0)
+Concrete type: Jellyfin.Plugin.FileTransformation.Configuration.PluginDefinedTransformation
+    IPlugin.IsAssignableFrom = False
+    base: System.Object (from System.Private.CoreLib 10.0.0.0)
+Concrete type: Jellyfin.Plugin.FileTransformation.Attributes.JellyfinVersionAttribute
+    IPlugin.IsAssignableFrom = False
+    base: System.Attribute (from System.Private.CoreLib 10.0.0.0)
+    base: System.Object (from System.Private.CoreLib 10.0.0.0)

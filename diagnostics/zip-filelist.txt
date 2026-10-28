@@ -1,0 +1,9 @@
+Archive:  FileTransformation-12.4.0.zip
+  Length      Date    Time    Name
+---------  ---------- -----   ----
+    54272  2026-10-28 22:26   Jellyfin.Plugin.FileTransformation.dll
+    12232  2026-10-28 22:26   Jellyfin.Plugin.FileTransformation.deps.json
+    32280  2026-10-28 22:26   Jellyfin.Plugin.FileTransformation.pdb
+    39105  2026-10-28 22:26   logo.png
+---------                     -------
+   137889                     4 files

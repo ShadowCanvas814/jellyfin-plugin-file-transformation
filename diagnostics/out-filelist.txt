@@ -1,6 +1,6 @@
 total 22512
-drwxr-xr-x 2 runner runner     4096 Oct 28 22:24 .
-drwxr-xr-x 8 runner runner     4096 Oct 28 22:24 ..
+drwxr-xr-x 2 runner runner     4096 Oct 28 22:26 .
+drwxr-xr-x 8 runner runner     4096 Oct 28 22:26 ..
 -rwxr--r-- 1 runner runner    30720 Apr 23  2026 Diacritics.dll
 -rwxr--r-- 1 runner runner   105984 Oct 26 21:10 Emby.Naming.dll
 -rwxr--r-- 1 runner runner   687616 Jan 14  2022 ICU4N.Transliterator.dll
@@ -10,9 +10,9 @@ drwxr-xr-x 8 runner runner     4096 Oct 28 22:24 ..
 -rwxr--r-- 1 runner runner   249344 Oct 26 21:10 Jellyfin.Database.Implementations.dll
 -rwxr--r-- 1 runner runner    37888 Oct 26 21:10 Jellyfin.Extensions.dll
 -rwxr--r-- 1 runner runner    11776 Oct 26 21:10 Jellyfin.MediaEncoding.Keyframes.dll
--rw-r--r-- 1 runner runner    12232 Oct 28 22:24 Jellyfin.Plugin.FileTransformation.deps.json
--rw-r--r-- 1 runner runner    54272 Oct 28 22:24 Jellyfin.Plugin.FileTransformation.dll
--rw-r--r-- 1 runner runner    32280 Oct 28 22:24 Jellyfin.Plugin.FileTransformation.pdb
+-rw-r--r-- 1 runner runner    12232 Oct 28 22:26 Jellyfin.Plugin.FileTransformation.deps.json
+-rw-r--r-- 1 runner runner    54272 Oct 28 22:26 Jellyfin.Plugin.FileTransformation.dll
+-rw-r--r-- 1 runner runner    32280 Oct 28 22:26 Jellyfin.Plugin.FileTransformation.pdb
 -rwxr--r-- 1 runner runner    48640 Oct 26 21:10 MediaBrowser.Common.dll
 -rwxr--r-- 1 runner runner   654336 Oct 26 21:11 MediaBrowser.Controller.dll
 -rwxr--r-- 1 runner runner   489472 Oct 26 21:10 MediaBrowser.Model.dll
@@ -23,4 +23,4 @@ drwxr-xr-x 8 runner runner     4096 Oct 28 22:24 ..
 -rwxr--r-- 1 runner runner   695336 Mar 17  2021 Newtonsoft.Json.dll
 -rwxr--r-- 1 runner runner   223136 Jun  8 19:11 Polly.Core.dll
 -rwxr--r-- 1 runner runner   288160 Jun  8 19:11 Polly.dll
--rw-r--r-- 1 runner runner    39105 Oct 28 22:24 logo.png
+-rw-r--r-- 1 runner runner    39105 Oct 28 22:26 logo.png
