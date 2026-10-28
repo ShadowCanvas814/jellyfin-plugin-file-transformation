@@ -1,23 +1,20 @@
 <h1 align="center">File Transformation</h1>
 <h2 align="center">A Jellyfin Plugin</h2>
 <p align="center">
-	<img alt="Logo" src="https://raw.githubusercontent.com/IAmParadox27/jellyfin-plugin-file-transformation/main/src/logo.png" />
+	<img alt="Logo" src="https://raw.githubusercontent.com/ShadowCanvas814/jellyfin-plugin-file-transformation/main/src/logo.png" />
 	<br />
 	<br />
-	<a href="https://github.com/IAmParadox27/jellyfin-plugin-home-sections">
-		<img alt="GPL 3.0 License" src="https://img.shields.io/github/license/IAmParadox27/jellyfin-plugin-file-transformation.svg" />
+	<a href="https://github.com/ShadowCanvas814/jellyfin-plugin-file-transformation/?tab=License-1-ov-file">
+		<img alt="GPL 3.0 License" src="https://img.shields.io/github/license/ShadowCanvas814/jellyfin-plugin-file-transformation.svg" />
 	</a>
-	<a href="https://github.com/IAmParadox27/jellyfin-plugin-home-sections/releases">
-		<img alt="Current Release" src="https://img.shields.io/github/release/IAmParadox27/jellyfin-plugin-file-transformation.svg" />
+	<a href="https://github.com/ShadowCanvas814/jellyfin-plugin-file-transformation/releases">
+		<img alt="Current Release" src="https://img.shields.io/github/release/ShadowCanvas814/jellyfin-plugin-file-transformation.svg" />
 	</a>
-	<a href='https://ko-fi.com/iamparadox27' target='_blank'><img height='20' style='border:0px;height:20px;' src='https://storage.ko-fi.com/cdn/kofi4.png?v=6' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
 </p>
 
-## Development Update - 20th August 2025
+## Used By
 
-Hey all! Things are changing with my plugins are more and more people start to use them and report issues. In order to make it easier for me to manage I'm splitting bugs and features into different areas. For feature requests please head over to <a href="https://features.iamparadox.dev/">https://features.iamparadox.dev/</a> where you'll be able to signin with GitHub and make a feature request. For bugs please report them on the relevant GitHub repo and they will be added to the <a href="https://github.com/users/IAmParadox27/projects/1/views/1">project board</a> when I've seen them. I've found myself struggling to know when issues are made and such recently so I'm also planning to create a system that will monitor a particular view for new issues that come up and send me a notification which should hopefully allow me to keep more up to date and act faster on various issues.
-
-As with a lot of devs, I am very momentum based in my personal life coding and there are often times when these projects may appear dormant, I assure you now that I don't plan to let these projects go stale for a long time, there just might be times where there isn't an update or response for a couple weeks, but I'll try to keep that better than it has been. With all new releases to Jellyfin I will be updating as soon as possible, I have already made a start on 10.11.0 and will release an update to my plugins hopefully not long after that version is officially released!
+- [Media Bar (ShadowCanvas814's fork, Jellyfin 12.4)](https://github.com/ShadowCanvas814/jellyfin-plugin-media-bar)
 
 ## Jellyfin 12.4 Compatibility Notes
 
@@ -29,7 +26,7 @@ This fork targets Jellyfin 12.4 (see `.github/workflows/build.yml`, which builds
 ## Introduction
 File Transformation is a Jellyfin Plugin that can be used to modify the served [jellyfin-web](https://github.com/jellyfin/jellyfin-web) content without having to modify the files directly.
 
-The use cases for this can be seen in my other plugins [plugin-pages](https://github.com/IAmParadox27/jellyfin-plugin-pages) and [home-sections](https://github.com/IAmParadox27/jellyfin-plugin-home-sections) which both take advantage of this.
+The use cases for this can be seen in plugins like [Media Bar (this fork)](https://github.com/ShadowCanvas814/jellyfin-plugin-media-bar), which takes advantage of this to inject its slideshow into the Jellyfin web client.
 
 ### Credit
 The original code and concept for this plugin came from this [Pull Request](https://github.com/jellyfin/jellyfin/pull/9095) from [JPVenson](https://github.com/JPVenson). A lot of the code is unmodified (bar personal code standards).
@@ -42,8 +39,8 @@ Well, this plugin is non destructive and allows multiple plugins to manipulate t
 
 ## Installation
 
-1. Add `https://www.iamparadox.dev/jellyfin/plugins/manifest.json` as a plugin source repository on your Jellyfin server.
-2. Find "File Transformation" in the list and install it. No configuration is required.
+1. Trigger the `Build for Jellyfin 12.4` workflow on this repo (or download the latest successful run's artifact from the Actions tab).
+2. Extract the downloaded zip into a new folder under your Jellyfin `plugins` directory (e.g. `plugins/FileTransformation-12.4.0`). No configuration is required.
 
 ### FAQ
 
@@ -109,7 +106,7 @@ After following these guidelines, please create a pull request and I'll review i
 Please declare your AI usage, if any, and if you have used AI for your change, please also declare your coding experience without AI. This won't impact whether the change is merged, it will allow me to properly and correctly review the change to ensure that nothing slips through the net.
 
 ## Requests
-If any functionality is desired to be overridden from Jellyfin's server please open a request on https://features.iamparadox.dev.
+If any functionality is desired to be overridden from Jellyfin's server please open an issue on [this fork's GitHub repo](https://github.com/ShadowCanvas814/jellyfin-plugin-file-transformation/issues).
 
 ## FAQ
 > Frequent questions will be added here as they are asked.
