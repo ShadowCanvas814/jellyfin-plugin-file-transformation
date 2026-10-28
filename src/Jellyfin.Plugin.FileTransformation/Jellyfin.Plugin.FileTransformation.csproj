@@ -24,7 +24,6 @@ This plugin is based on a Pull Request (https://github.com/jellyfin/jellyfin/pul
         <PackageReference Include="Jellyfin.Model" Version="$(JellyfinNugetVersion)" />
         <PackageReference Include="Jellyfin.Controller" Version="$(JellyfinNugetVersion)" />
         <PackageReference Include="Jellyfin.Data" Version="$(JellyfinNugetVersion)" />
-        <PackageReference Include="Jellyfin.Extensions" Version="$(JellyfinNugetVersion)" />
     </ItemGroup>
 
     <ItemGroup>
