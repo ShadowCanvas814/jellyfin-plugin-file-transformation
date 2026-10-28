@@ -11,7 +11,7 @@ jobs:
         with:
           dotnet-version: 10.0.x
       - run: dotnet publish src/Jellyfin.Plugin.FileTransformation/Jellyfin.Plugin.FileTransformation.csproj -c Release -p:JellyfinVersion=12.4.0 -o out
-      - run: cd out && zip ../FileTransformation-12.4.0.zip *.dll *.deps.json *.pdb logo.png
+      - run: cd out && zip ../FileTransformation-12.4.0.zip Jellyfin.Plugin.FileTransformation.dll Jellyfin.Plugin.FileTransformation.deps.json Jellyfin.Plugin.FileTransformation.pdb logo.png
       - uses: actions/upload-artifact@v4
         with:
           name: FileTransformation-12.4.0
@@ -25,6 +25,7 @@ jobs:
               <OutputType>Exe</OutputType>
               <TargetFramework>net10.0</TargetFramework>
               <Nullable>enable</Nullable>
+              <ImplicitUsings>enable</ImplicitUsings>
             </PropertyGroup>
             <ItemGroup>
               <PackageReference Include="Jellyfin.Model" Version="12.4.0" />
@@ -118,6 +119,7 @@ jobs:
         run: |
           mkdir -p diagnostics
           ls -la out > diagnostics/out-filelist.txt
+          unzip -l FileTransformation-12.4.0.zip > diagnostics/zip-filelist.txt
           cp inspect-output.txt diagnostics/inspect-output.txt
           git config user.name "build-bot"
           git config user.email "build-bot@users.noreply.github.com"
