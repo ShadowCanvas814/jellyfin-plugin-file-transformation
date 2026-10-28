@@ -19,6 +19,13 @@ Hey all! Things are changing with my plugins are more and more people start to u
 
 As with a lot of devs, I am very momentum based in my personal life coding and there are often times when these projects may appear dormant, I assure you now that I don't plan to let these projects go stale for a long time, there just might be times where there isn't an update or response for a couple weeks, but I'll try to keep that better than it has been. With all new releases to Jellyfin I will be updating as soon as possible, I have already made a start on 10.11.0 and will release an update to my plugins hopefully not long after that version is officially released!
 
+## Jellyfin 12.4 Compatibility Notes
+
+This fork targets Jellyfin 12.4 (see `.github/workflows/build.yml`, which builds against `JellyfinVersion=12.4.0`). Two things worth knowing if you're running on 12.4:
+
+- **Build packaging:** `dotnet publish` always copies the plugin's full transitive dependency tree (including Jellyfin's own `MediaBrowser.Common`/`Controller`/`Model` assemblies) into the output folder. If those get zipped up alongside the plugin and deployed, Jellyfin loads its own bundled copies into the plugin's assembly context, the plugin's `IPlugin` interface then resolves against a different assembly identity than the server's, and Jellyfin's `PluginManager` silently excludes the plugin from its instantiation list — no error is logged, it just never loads. The release zip built by this fork's workflow only includes the plugin's own `.dll`/`.deps.json`/`.pdb`/`logo.png`, which avoids this.
+- **Home Screen Sections incompatibility:** once File Transformation is actually loading and running its registered transformations on 12.4, the [Home Screen Sections](https://github.com/IAmParadox27/jellyfin-plugin-home-sections) plugin's injected script (`home-screen-sections.js`) throws an uncaught `TypeError: Cannot read properties of undefined (reading 'tv')` while patching the home tab. This crashes Jellyfin's web client before it finishes mounting (`#reactRoot` stays empty — no home page content, nothing to scroll to), even though File Transformation and other plugins using it (e.g. Media Bar, Jellyfin Enhanced) work fine. Until Home Screen Sections has its own 12.4 compatibility fix, disable it (Dashboard → Plugins → Home Screen Sections) if you run into a blank/frozen home page after installing this build.
+
 ## Introduction
 File Transformation is a Jellyfin Plugin that can be used to modify the served [jellyfin-web](https://github.com/jellyfin/jellyfin-web) content without having to modify the files directly.
 
